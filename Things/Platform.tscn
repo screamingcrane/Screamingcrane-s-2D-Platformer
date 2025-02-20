@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3caj6jbpd82d"]
+
+[ext_resource type="Texture2D" uid="uid://c1lysny2qgioy" path="res://pics/Plat and trees 32.png" id="1_eju5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2m30p"]
+size = Vector2(33, 7)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_eju5p")
+region_enabled = true
+region_rect = Rect2(30.6102, 8.80748, 33.3898, 9.80649)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_2m30p")
+one_way_collision = true

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba5ly6ov4duog"]
+
+[ext_resource type="Texture2D" uid="uid://bawjs3uq6b128" path="res://pics/spikes and evorment.png" id="1_n1pjp"]
+[ext_resource type="PackedScene" uid="uid://5k3hqtuutq6o" path="res://Things/kill_zone.tscn" id="2_emsk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qui35"]
+size = Vector2(29, 11)
+
+[node name="Small Floor Spike" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n1pjp")
+region_enabled = true
+region_rect = Rect2(0, 16, 32, 16)
+
+[node name="kill zone" parent="." instance=ExtResource("2_emsk0")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill zone"]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_qui35")
